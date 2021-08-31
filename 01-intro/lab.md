@@ -156,7 +156,7 @@ http://193.40.156.86/students.html to find the correct connection parameters.
 
 Step 4: Run the Ansible playbook:
 
-    ansible-playbook test_ansible.yaml
+    ansible-playbook infra.yaml
 
 You should see only green "ok" messages.
 
