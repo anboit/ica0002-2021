@@ -120,8 +120,8 @@ Logout and log in again. Now this command should also work:
 First, make sure that your Git repository is set up correctly -- check
 [this list](http://193.40.156.86/students.html) for details.
 
-Then, make sure that your virtual machine is set up -- SSH access details should
-be printed here: http://193.40.156.86/students/your_github_username.html. Note the SSH port number!
+Then, make sure that your virtual machine is set up -- click your name here and find the
+SSH access details on your page. Note the SSH port number!
 
 Finally, test that SSH access works -- run this command on the **control node**
 (replace the `122` with the port number from the list above):
