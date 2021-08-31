@@ -1,5 +1,5 @@
 ---
   - name: Ansible connection test
-    hosts: FIXME
+    hosts: all
     roles:
       - test_connection
