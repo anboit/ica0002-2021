@@ -14,7 +14,7 @@ Git repositories. We'll use GitHub for this course as a collaboration platform.
 
 If you feel some lack of experience with Git and GitHub we recommend to read
 [this tutorial](https://guides.github.com/introduction/git-handbook).
-It's ok to use GUI version:[GitHub Desktop](https://desktop.github.com/)
+It's also ok to use GUI version if you prefer: [GitHub Desktop](https://desktop.github.com/)
 
 
 ## Ansible Intro
