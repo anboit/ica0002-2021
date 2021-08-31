@@ -145,7 +145,7 @@ Step 1: Create a working directory named `ica0002` (same as your GitHub
 repository name).
 
 Step 2: In that directory, create files named `ansible.cfg`, `hosts`,
-`roles/test_connection/main.yaml` and `infra.yaml` -- you can just copy
+`roles/test_connection/tasks/main.yaml` and `infra.yaml` -- you can just copy
 the contents of `01-demo` directory from the link above.
 
 Note: directory structure and file names matter! Create the files and
