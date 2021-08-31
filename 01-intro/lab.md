@@ -188,5 +188,5 @@ Once done, the following files should appear in the root of your GitHub
 repository:
  - `ansible.cfg`
  - `hosts`
+ - `infra.yaml`
  - `roles/test_connection/tasks/main.yaml`
- - `test_ansible.yaml`
