@@ -82,7 +82,7 @@ use email or GitHub issues. We won't handle these in class.
  - Demo: Docker basics
  - Lab: Redeploy some of the previous apps as Docker containers
 
-[Week 13: HAProxy](./13-haproxy) -- Nov 24
+[Week 13: HAProxy](./13-haproxy)
  - Lecture: Load balancers; HAProxy; Keepalived
  - Lab: HAProxy; Keepalived
 
