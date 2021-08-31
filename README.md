@@ -6,6 +6,8 @@ Video lectures: [link](https://echo360.org.uk/section/559ad5e8-d6ce-4c29-aa70-79
 
 [Discord](https://discord.com/download) channel invite: [link](https://discord.gg/psHaMpff).
 
+Virtual machines: [link](http://193.40.156.86/students.html)
+
 The following info is for **both Tuesday and Wednesday groups**.
 
 Class times:
