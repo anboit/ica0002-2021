@@ -80,7 +80,7 @@ use email or GitHub issues. We won't handle these in class.
 [Week 12: Virtualization](./12-docker)
  - Lecture: Intro to virtualization; Containerization
  - Demo: Docker basics
- - Lab: Reinstall Agama and Grafana to run in Docker
+ - Lab: Redeploy some of the previous apps as Docker containers
 
 [Week 13: HAProxy](./13-haproxy) -- Nov 24
  - Lecture: Load balancers; HAProxy; Keepalived
