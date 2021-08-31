@@ -151,9 +151,8 @@ the contents of `01-demo` directory from the link above.
 Note: directory structure and file names matter! Create the files and
 directories named exactly as requested.
 
-Step 3: Update your inventory file named `hosts` -- use
-http://193.40.156.86/students/your_github_username.html to find the correct connection
-parameters.
+Step 3: Update your inventory file named `hosts` -- check your own page from
+http://193.40.156.86/students.html to find the correct connection parameters.
 
 Step 4: Run the Ansible playbook:
 
