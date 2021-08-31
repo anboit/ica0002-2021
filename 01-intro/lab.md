@@ -85,9 +85,9 @@ continue with the next task.
 
 **(on a Control node -- same machine where your SSH keys reside)**
 
-Note: we will use Ansible version 2.9 for this course. Teachers will have this
+Note: we will use Ansible version 4.4.0 (ansible-core 2.11.4) for this course. Teachers will have this
 version installed and use it to check your tasks. Your code is considered
-working only if it executes successfully on Ansible 2.9. If you're using other
+working only if it executes successfully on Ansible 4.4.0. If you're using other
 Ansible versions -- you're on your own with them.
 
 Note for Windows users: Ansible does not officially support running on Windows,
