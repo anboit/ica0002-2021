@@ -22,7 +22,7 @@ Class times:
 This week lecture video is recorded on Tuesdays at 17:45. You can watch it live,
 or later any time that is convenient for you.
 
-Lab task is presented on Tuesdays at 19:15. You can watch it live, or later any
+Lab task is presented on Tuesdays at 19:30. You can watch it live, or later any
 time that is convenient for you.
 
 There are 3 lab times available. You can choose any lab time you want, but it's
