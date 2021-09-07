@@ -13,9 +13,9 @@ The following info is for **both Tuesday and Wednesday groups**.
 Class times:
 
  - Tuesday 17:45 -- room 217 -- lecture -- video is recorded
- - Tuesday 19:15 -- room 317 -- lab -- video is recorded
+ - Tuesday 19:30 -- room 319 -- lab -- video is recorded
  - Wednesday 17:45 -- room 219 -- lab
- - Wednesday 19:15 -- room 410 -- lab
+ - Wednesday 19:30 -- room 410 -- lab
 
 **DO NOT COME TO CLASS IF YOU FEEL SICK! STAY AT HOME!**
 
