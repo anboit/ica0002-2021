@@ -88,7 +88,7 @@ contain something like this:
 
 Once done, run Ansible to set up Agama, and make sure it executes sucessfully:
 
-    ansible-playbok infra.yaml
+    ansible-playbook infra.yaml
 
 After that you can verify that the application is working by running this
 command on the **managed host** as user `ubuntu`:
@@ -170,7 +170,7 @@ that should be completed before configuring the web server:
 
 Once done, run Ansible to set up uWSGI, and make sure it executes sucessfully:
 
-	ansible-playbok infra.yaml
+	ansible-playbook infra.yaml
 
 After that you can verify that uWSGI is started by running this command on a
 managed host (port number will be different if you changed it):
@@ -239,7 +239,7 @@ lab; if it doesn't -- add the role after the `uwsgi`.
 
 Once done, run Ansible reconfigure Nginx, and make sure it executes sucessfully:
 
-	ansible-playbok infra.yaml
+	ansible-playbook infra.yaml
 
 Once done, AGAMA should be available at
 [your public URL](http://193.40.156.86/students.html).
@@ -276,7 +276,7 @@ Your repository also contains all the required files from the previous labs.
 AGAMA with uWSGI and Nginx can be installed and configured on empty machine by
 running exactly this command exactly once:
 
-	ansible-playbook lab03_web_app.yaml
+	ansible-playbook infra.yaml
 
 Running the same command again does not make any changes on the managed host.
 
