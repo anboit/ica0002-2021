@@ -281,4 +281,4 @@ running exactly this command exactly once:
 Running the same command again does not make any changes on the managed host.
 
 AGAMA web application is available on
-[your public URL](http://193.40.156.86/student.html).
+[your public URL](http://193.40.156.86/students.html).
