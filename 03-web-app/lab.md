@@ -125,7 +125,7 @@ This role should:
      - uWSGI should listen on local interface (`localhost` or `127.0.0.1`);
        alternatively, you can use UNIX socket file if you want.
      - AGAMA should be configured to use SQLite3 database located at
-       `/opt/agama/db.slite3`. No need to _create_ that file explicitly though,
+       `/opt/agama/db.sqlite3`. No need to _create_ that file explicitly though,
        AGAMA will create it automatically on the first request.
  3. Ensure that uWSGI service is started (unconditionally) and enabled to start
     automatically on system boot.
@@ -248,7 +248,7 @@ Feel free to click around and break all the things. If you feel that AGAMA app
 has some issues please consider
 [reporting them](https://github.com/hudolejev/agama#contributing).
 
-If you need to 'reset' the app just delete the `/opt/agama/db.slite3` file on
+If you need to 'reset' the app just delete the `/opt/agama/db.sqlite3` file on
 the managed host; AGAMA will re-create it (if missing) on the next request.
 
 Hints:
