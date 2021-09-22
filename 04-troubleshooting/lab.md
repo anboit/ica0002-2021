@@ -271,7 +271,7 @@ It does not use variables yet, but still reads the variable file. If this file h
 Ansible will print an error. If it executed successfully -- your variables file is likely fine.
 
 
-## Task 6: Add MySQL database
+## Task 7: Add MySQL database
 
 Add another task to `roles/mysql/tasks/main.yaml` to create a MySQL database:
  - add this task after the one that starts and enables the MySQL server; MySQL server should be
@@ -332,7 +332,7 @@ IF database exists (good) it will produce no output. Otherwise an error will be 
 If you get this error, please fix it before moving forward.
 
 
-## Task 7: Add MySQL user
+## Task 8: Add MySQL user
 
 Add another task to `mysql` role to create a MySQL user for the web application:
  - use Ansible module
@@ -380,7 +380,7 @@ Type `exit` to quit the MySQL console.
 If something doesn't work here -- please fix it before moving forward.
 
 
-## Task 8: Reconfigure AGAMA to use MySQL
+## Task 9: Reconfigure AGAMA to use MySQL
 
 Finally, it's time to configure our web application to use MySQL as the storage backend.
 This is an easy task now :)
