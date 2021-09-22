@@ -100,7 +100,7 @@ Once done your inventory file should look similar to this:
 
 We have two machines now, and there are some tasks we want to execute on both of them before the
 other configuration starts. One of this tasks is APT cache update that you previously did by adding
-an `update_cahce: yes` to your `apt` module tasks.
+an `update_cache: yes` to your `apt` module tasks.
 
 Let's add another role named `init` that will be assigned to every machine as the very first step
 in out infrastructure deployment. List of tasks in this role should only contain one task so far --
@@ -127,7 +127,7 @@ Update the `infra.yaml` playbook and add another play (as the very first one) na
 This play should apply the `init` role to all hosts in your infrastrucure.
 This play will need administrative privileges to execute the tasks (add `become: yes`).
 
-Now with this `init` role you don't need to add `update_cahce: yes` to `apt` module tasks anymore.
+Now with this `init` role you don't need to add `update_cache: yes` to `apt` module tasks anymore.
 You can delete these from the other roles.
 
 Also delete the `users` role from the plays. It's not needed there anymore.
