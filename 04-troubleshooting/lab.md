@@ -421,7 +421,7 @@ You can ensure that it uses the MySQL backend by doing this:
 1. Add some items, or delete the default ones
 2. SSH to the MySQL server and run
 
-    sudo mysql -e "SELECT * FROM agama.item" agama
+        sudo mysql -e "SELECT * FROM agama.item" agama
 
 You should see your recent changes there:
 
