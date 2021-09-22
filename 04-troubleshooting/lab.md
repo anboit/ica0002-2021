@@ -276,7 +276,7 @@ Ansible will print an error. If it executed successfully -- your variables file 
 Add another task to `roles/mysql/tasks/main.yaml` to create a MySQL database:
  - add this task after the one that starts and enables the MySQL server; MySQL server should be
    running before you can create databases
- - ase Ansible module
+ - use Ansible module
    [mysql_db](https://docs.ansible.com/ansible/latest/collections/community/mysql/mysql_db_module.html);
    note the module name: it's community module and it's named `community.mysql.mysql_db`, not
    `ansible.builtin.<something>` as others you've seen before
