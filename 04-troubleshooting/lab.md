@@ -90,10 +90,10 @@ Once done your inventory file should look similar to this:
     elvis-2  ansible_host=... ...
 
     [db_servers]
-    vm-2
+    elvis-2
 
     [web_servers]
-    vm-1
+    elvis-1
 
 
 ## Task 3: Add the init role
