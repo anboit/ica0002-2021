@@ -1,0 +1,21 @@
+---
+- name: Setup
+  hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+    - setup:
+
+
+- name: DNS server
+  hosts: vm2
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: bind package
+      apt:
+        name: bind9
+        update_cache: yes
+
+    - debug:
+        msg: "{% for vm in groups['all'] %} nameserver {{ hostvars[vm]['ansible_default_ipv4']['address'] }}{% endfor %}"
