@@ -433,6 +433,20 @@ You should see your recent changes there:
     |  3 | I HAVE JUST ADDED THIS TO TEST MYSQL BACKEND  |     0 |  <-- here it is
     +----+-----------------------------------------------+-------+
 
+If AGAMA is not working, make sure to check the uWSGI logs. One often problem is AGAMA trying to use the
+wrong Python MySQL library. If you see this error in uWSGI log:
+
+	ModuleNotFoundError: No module named 'MySQLdb'
+
+then it's exactly this case. Workaround is to tell AGAMA which exact Python MySQL library to use.
+For this, change the `AGAMA_DATABASE_URI` in the uWSGI configuration file template for AGAMA to something like
+
+	AGAMA_DATABASE_URI=mysql+pymysql://...
+	                        ^------^
+	                        Add this
+
+Run the Asnible again to apply changes, and check if everything is working as expected.
+
 That's it! All done! That was a long lab (:
 
 
