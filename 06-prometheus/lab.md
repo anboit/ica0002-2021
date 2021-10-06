@@ -20,10 +20,10 @@ It's not allowed to use IP addresses in Prometheus config, only names are allowe
 
 Install Nginx and configure reverse proxy:
 
-    vm:80/node_exporter -> localhost:9100/metrics  # Node exporters
+    vm:80/node-metrics -> localhost:9100/metrics  # Node exporters
     vm:80/prometheus -> localhost:9090  # Prometheus
 
-VM with Prometheus should have at least 2 "proxy_pass" statements. VM with only Node Exporter should forward only /node_exporter.
+VM with Prometheus should have at least 2 "proxy_pass" statements. VM with only Node Exporter should forward only /node-metrics.
 
 ## Task 4: Adjust Prometheus service
 
@@ -66,6 +66,6 @@ hosts.
 
 After playbook execution you should be able to:
 
-1. Check node metrics by using \<your_VM_http_link\>/node_exporter.
+1. Check node metrics by using \<your_VM_http_link\>/node-metrics.
 
 2. Query historical data from Prometheus web interface \<your_VM_http_link\>/prometheus.
