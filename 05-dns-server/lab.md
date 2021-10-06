@@ -47,7 +47,7 @@ Default config file location: /etc/bind/named.conf.options
 
 ## Task 5: Configure master zone
 
-Expected file location on DNS server: /etc/bind/db.{startup_name}
+Expected file location on DNS server: /var/lib/bind/db.{startup_name}
 
 Structure of the file you can find in 05-demo or in /etc/bind/db.local on your vm.
 
