@@ -68,8 +68,8 @@ Don't add locations that point to unexisting services. You can use this code for
 Create Grafana `Main` dashboard that will show:
  - CPU load on VMs
  - Memory consumption on VMs
- - Bind9 status + amount of DNS queries per minute (bind_resolver_queries_total)
- - MySQL status + amount of queries per minute (mysql_global_status_queries)
+ - Bind9 status + amount of A DNS queries per minute (bind_resolver_queries_total)
+ - MySQL status + amount of selects per minute (mysql_global_status_commands_total)
  - Nginx status + amount of requests per minute (nginx_http_requests_total)
 
 Use Prometheus as datasource.
