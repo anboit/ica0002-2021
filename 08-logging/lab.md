@@ -4,15 +4,15 @@ In this lab we will setup centralized logging.
 
 ## Task 1: Install InfluxDB
 
-Follow the oficial guide: https://docs.influxdata.com/influxdb/v1.8/introduction/install/#installing-influxdb-oss
+Follow the official guide: https://docs.influxdata.com/influxdb/v1.8/introduction/install/#installing-influxdb-oss
 
 ## Task 2: Create pinger service on one of VMs
 
-Find bash script "pinger.sh" in 08-demo.
+Find bash script "pinger.sh" in 08-files.
 
 Place this script to /usr/local/bin/pinger.
 
-Create a service "pinger" that runs from user "pinger". Check previous 08-demo for systemd service unit example. Place it into /etc/systemd/system/.
+Create a service "pinger" that runs from user "pinger". Check previous 08-files for systemd service unit example. Place it into /etc/systemd/system/.
 
 Don't forget to execute on systemd config change:
 
@@ -22,7 +22,7 @@ Pinger script requires config file:
 
     /etc/pinger/pinger.conf
 
-Example can be found in 08-demo as well.
+Example can be found in 08-files as well.
 
 ## Task 3: Add latency monitoring to main Grafana dashboard
 
@@ -64,7 +64,9 @@ Add new datasource and dashboard to Grafana provisioning.
 
 Install InfluxDB stats exporter: https://github.com/carlpett/influxdb_stats_exporter
 
-Make it a systemd service. Run it with user `prometheus` as all other exporter do. Describe the service in /etc/systemd/system/prometheus-influxdb-stats-exporter.service.
+Download binary from latest [release](https://github.com/carlpett/influxdb_stats_exporter/releases/tag/v0.1.1) to /usr/local/bin/.
+
+Create new systemd service. Run it with user `prometheus` as all other exporter do. Describe the service in /etc/systemd/system/prometheus-influxdb-stats-exporter.service.
 
 Add couple more panels to your `Main` Grafana dashboard:
 
