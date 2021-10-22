@@ -73,6 +73,10 @@ Add couple more panels to your `Main` Grafana dashboard:
 - InfluxDB health (influxdb_exporter_stats_query_success)
 - InfluxDB write rate (influxdb_write_write_ok)
 
+## Task 8: Supress InfluxDB request logging
+
+By default InfluxDB logs every request, which floods the logs. Disable logging of HTTP requests. Use `influxdb.conf` from 08-files. 
+
 ## Expected result
 
 Your repository contains these files and directories:
