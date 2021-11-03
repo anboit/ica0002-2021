@@ -11,12 +11,6 @@ There are multiple ways how to do backups; on this lab we'll use probably the si
 
 ## Task 1
 
-Update `backup` role:
- - ensure `/home/backup/restore` directory is created, owned and writeable by user `backup`
- - ensure [Duplicity](http://duplicity.nongnu.org/) is installed; the package is available in the
-   Ubuntu APT repository
- - this role should be already added to `Init` play (lab 9)
-
 Add `mysql_backup` role:
  - ensure that `/home/backup/mysql` directory is created on MySQL servers, owned and writeable by
    user `backup`
@@ -26,6 +20,42 @@ Add `influxdb_backup` role:
  - ensure that `/home/backup/influxdb` directory si created on InfluxDB servers, owned and writeable
    by  user `backup`
  - add this role to `InfluxDB servers` play
+
+Update `backup` role:
+ - ensure `/home/backup/restore` directory is created, owned and writeable by user `backup`
+ - ensure [Duplicity](http://duplicity.nongnu.org/) is installed; the package is available in the
+   Ubuntu APT repository
+ - this role should be already added to `Init` play (lab 9)
+
+Also SSH connection to backup server that we've set up in the lab 9 will not work automatically as
+it requires that backup server host key is first accepted and verified. While testing in on the
+previos lab you've probably seen this prompt:
+
+    The authenticity of host 'backup (192.168.42.156)' can't be established.
+    ECDSA key fingerprint is SHA256:ngxLWuTXPrk7UBzeLN2D6DEwA+evAzpU7pDJ4Jd4fGE.
+    Are you sure you want to continue connecting (yes/no/[fingerprint])?
+
+It was fixed by typing 'yes', and needs to be automated.
+
+Update `backup` role to create a file `/home/backup/.ssh/known_hosts` on managed hosts with the
+following content:
+
+    backup {{ backup_server_ssh_key }}
+    backup.{{ domain }} {{ backup_server_ssh_key }}
+
+ - `backup_server_ssh_key` variable should be defined in `group_vars/all.yaml`
+ - server key is `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBSne71MCp6CQCHURWe3CLud6vPDkLfL83Oab/giAI7O`
+ - note that server key may change if the backup server is rebuilt
+ - `domain` is variable that holds your domain name; might be also called `startup_name` or
+   something else -- update `known_hosts` file template accordingly if you want different variable
+   names
+
+This file should be owned and writeable by user `backup`. To verify that it works, run this command
+on a managed host:
+
+    ssh <your-github-username>@backup.<your-domain>
+
+It shouldn't ask to verify the server key anymore.
 
 
 ## Task 2
@@ -119,8 +149,8 @@ Update `/etc/cron.d/mysql-backup` Cron tab and add the backup upload jobs. Examp
 Duplicity running over Rsync, weekly full and daily incremental backups -- your file will look
 similar but schedules will probably be different:
 
-    12 0 * * * 0  backup  duplicity --no-encryption full /home/backup/mysql/ rsync://elvis@backup.x.y//home/elvis/
-    12 0 * * * 1-6  backup  duplicity --no-encryption incremental /home/backup/mysql/ rsync://elvis@backup.x.y//home/elvis/
+    12 0 * * 0  backup  duplicity --no-encryption full /home/backup/mysql/ rsync://elvis@backup.x.y//home/elvis/
+    12 0 * * 1-6  backup  duplicity --no-encryption incremental /home/backup/mysql/ rsync://elvis@backup.x.y//home/elvis/
 
 Make sure that whichever schedule you choose the first created backup is full -- not incremental.
 You might need to create the first full backup yourself -- just run the command from the Cron tab
@@ -226,6 +256,7 @@ Your repository contains these files and directories:
 
     backup_restore.md
     backup_sla.md  # (updated if needed)
+    group_vars/all.yaml
     infra.yaml
     roles/backup/tasks/main.yaml
     roles/influxdb_backup/tasks/main.yaml
