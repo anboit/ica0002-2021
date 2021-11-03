@@ -17,7 +17,7 @@ Add `mysql_backup` role:
  - add this role to `MySQL servers` play
 
 Add `influxdb_backup` role:
- - ensure that `/home/backup/influxdb` directory si created on InfluxDB servers, owned and writeable
+ - ensure that `/home/backup/influxdb` directory is created on InfluxDB servers, owned and writeable
    by  user `backup`
  - add this role to `InfluxDB servers` play
 
