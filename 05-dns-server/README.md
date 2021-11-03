@@ -65,8 +65,8 @@ Example of playbook:
 
 	- name: Collect info about all VMs
 	  hosts: all <-- Play runs on all hosts
-	  tasks:
-        - setup:
+	  roles:
+        - setup
 
 	- name: DNS servers
 	  hosts: dns_server <- Play runs only on DNS server
