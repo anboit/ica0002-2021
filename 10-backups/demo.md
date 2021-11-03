@@ -35,7 +35,7 @@ table named `item` (it is created by Agama app automatically).
 Also in this demo backup server hostname is `backup.foo.bar`. Yours will be different, should be
 `backup.<your-domain>` as required in lab 9.
 
-Note: make sure to complete task 1 of the lab 10 before running any further command from this demo.
+Note: make sure to complete task 2 of the lab 10 before running any further command from this demo.
 
 
 ## Extract data from the existing database
