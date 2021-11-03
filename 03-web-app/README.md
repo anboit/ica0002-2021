@@ -34,7 +34,7 @@ approach.
 
 ## Before you start
 
-Update your Ansible inventory file from the [lab 2](../02-web-server/lab.md)
+Update your Ansible inventory file from the [lab 2](../02-web-server)
 and change your virtual machine connection parameters. You can find these on
 your page [in this list](http://193.40.156.86/students.html).
 

@@ -22,8 +22,8 @@ the aspects of a backup process.
 
 For this demo we will need to set up a few things first:
  1. App server with Agama stack
- 2. MySQL server with Agama database from [lab 4](../04-troubeshooting/lab.md)
- 3. Working connection to backup server as described in [lab 9](../09-backups/lab.md) -- user
+ 2. MySQL server with Agama database from [lab 4](../04-troubeshooting)
+ 3. Working connection to backup server as described in [lab 9](../09-backups) -- user
     `backup` on the MySQL server can connect to backup server over SSH
  4. User `backup` access to MySQL database; it will be configred in the following lab task 1
 

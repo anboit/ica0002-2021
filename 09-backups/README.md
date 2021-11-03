@@ -32,7 +32,7 @@ hard-code it but store as the Ansible variable.
 
 Once done, each of your virtual machines should be able to resolve backup server name. You can check
 it by running this command on any of your VMs (replace `foo.bar` with your domain you have set up in
-[lab 5](../05-dns-server/lab.md)):
+[lab 5](../05-dns-server)):
 
     host backup.foo.bar.
 
@@ -71,7 +71,7 @@ has an option to do it automatically -- check the module documentation.
 If you feel that SSH keys are still unclear topic for you please refer to
 [lecture 2 slides](../02-web-server) that covered it.
 
-Add this role to `Init` play created in [lab 4](../04-troubleshooting/lab.md) and run Ansible to
+Add this role to `Init` play created in [lab 4](../04-troubleshooting) and run Ansible to
 apply the changes:
 
     ansible-playbook infra.yaml

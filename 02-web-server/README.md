@@ -2,7 +2,7 @@
 
 ## Task 1
 
-Update your Ansible inventory file from the [lab 1](../01-intro/lab.md) and add
+Update your Ansible inventory file from the [lab 1](../01-intro) and add
 the `web_servers` group. It should contain the single host -- your VM
 [from your page](http://193.40.156.86/students.html). Example:
 
