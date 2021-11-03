@@ -1,7 +1,7 @@
 # Lab 10
 
 In this lab we will set up automatic backups for your infrastructure and improve the documentation
-from [the previous lab](../09-backups/lab.md) accordingly.
+from [the previous lab](../09-backups) accordingly.
 
 There are multiple ways how to do backups; on this lab we'll use probably the simplest approach:
  1. Gather data to be backed up from certain services to a single location on this machine
@@ -61,14 +61,14 @@ It shouldn't ask to verify the server key anymore.
 ## Task 2
 
 Update `mysql_backup` role to configure MySQL access for a `backup` user created in the
-[lab 9](../09-backups/lab.md):
+[lab 9](../09-backups):
  - MySQL user named `backup` with privileges `LOCK TABLES,SELECT` on `agama` database
  - MySQL client configuration file `/home/backup/.my.cnf`
 
 **Make sure that this `.my.cnf` file is readable only by user `backup` and noone else!**
 
 Hint: you did something very similar for Prometheus MySQL exporter user in the
-[lab 7](../07-grafana/lab.md).
+[lab 7](../07-grafana).
 
 Ensure that user `backup` can create MySQL dumps; run this command manually on your MySQL host:
 

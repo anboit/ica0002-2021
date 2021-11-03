@@ -1,6 +1,6 @@
 # Lab 4
 
-In this lab we'll improve setup from the [lab 3](../03-web-app/lab.md) by adding a separate database
+In this lab we'll improve setup from the [lab 3](../03-web-app) by adding a separate database
 server for our app. We'll also learn how to use Ansible variables and Vault.
 
 **Important!**
