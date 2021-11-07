@@ -229,7 +229,7 @@ This should print no errors; exit code should be 0; example:
 
 Use this command in Cron tab to create InfluxDB dumps:
 
-    rm -rf /home/backup/influxdb/*; influxd backup -database telegraf /home/backup/influxdb
+    rm -rf /home/backup/influxdb/*; influxd backup -portable -database telegraf /home/backup/influxdb
 
 Here the previous dump is deleted before creating a new one.
 
